@@ -37,7 +37,7 @@ while getopts ":I:M:E:X:" optname; do
     esac
 
 done
-
+language="e"
 if [ -z "$iface" ]; then
     useNIC=""
 fi
@@ -2729,34 +2729,7 @@ function MediaUnlockTest_music.jp() {
     fi
 }
 	
-function NA_UnlockTest() {
-    echo "===========[ North America ]==========="
-    MediaUnlockTest_Fox ${1}
-    MediaUnlockTest_HuluUS ${1}
-    MediaUnlockTest_ESPNPlus ${1}
-    MediaUnlockTest_EPIX ${1}
-    MediaUnlockTest_Starz ${1}
-    MediaUnlockTest_HBONow ${1}
-    MediaUnlockTest_HBOMax ${1}
-    MediaUnlockTest_BritBox ${1}
-    MediaUnlockTest_NBATV ${1}
-    MediaUnlockTest_FuboTV ${1}
-    MediaUnlockTest_SlingTV ${1}
-    MediaUnlockTest_PlutoTV ${1}
-    MediaUnlockTest_AcornTV ${1}
-    MediaUnlockTest_SHOWTIME ${1}
-    MediaUnlockTest_ATTNOW ${1}
-    MediaUnlockTest_encoreTVB ${1}
-    MediaUnlockTest_CineMax ${1}
-    MediaUnlockTest_Funimation ${1}
-    MediaUnlockTest_DiscoveryPlus ${1}
-    MediaUnlockTest_ParamountPlus ${1}
-    MediaUnlockTest_PeacockTV ${1}
-    ShowRegion CA
-    MediaUnlockTest_CBCGem ${1}
-    MediaUnlockTest_Crave ${1}
-    echo "======================================="
-}
+
 
 function EU_UnlockTest() {
     echo "===============[ Europe ]=============="
@@ -2784,85 +2757,21 @@ function EU_UnlockTest() {
     MediaUnlockTest_NLZIET ${1}
     MediaUnlockTest_videoland ${1}
     MediaUnlockTest_NPO_Start_Plus ${1}
-    ShowRegion ES
-    MediaUnlockTest_HBO_Spain ${1}
-    MediaUnlockTest_PANTAYA ${1}
-    ShowRegion IT
-    MediaUnlockTest_RaiPlay ${1}
-    ShowRegion RU
-    #MediaUnlockTest_MegogoTV ${1}
-    MediaUnlockTest_Amediateka ${1}
-    ShowRegion PT
-    MediaUnlockTest_HBO_Portugal ${1}
     echo "======================================="
 }
 
-function HK_UnlockTest() {
-    echo "=============[ Hong Kong ]============="
-    MediaUnlockTest_NowE ${1}
-    MediaUnlockTest_ViuTV ${1}
-    MediaUnlockTest_MyTVSuper ${1}
-    MediaUnlockTest_HBOGO_ASIA ${1}
-    MediaUnlockTest_BilibiliHKMCTW ${1}
-    echo "======================================="
-}
 
-function TW_UnlockTest() {
-    echo "==============[ Taiwan ]==============="
-    MediaUnlockTest_KKTV ${1}
-    MediaUnlockTest_LiTV ${1}
-    MediaUnlockTest_MyVideo ${1}
-    MediaUnlockTest_4GTV ${1}
-    MediaUnlockTest_LineTV.TW ${1}
-    MediaUnlockTest_HamiVideo ${1}
-    MediaUnlockTest_Catchplay ${1}
-    MediaUnlockTest_HBOGO_ASIA ${1}
-    MediaUnlockTest_BahamutAnime ${1}
-    MediaUnlockTest_ElevenSportsTW ${1}
-    MediaUnlockTest_BilibiliTW ${1}
-    echo "======================================="
-}
-
-function JP_UnlockTest() {
-    echo "===============[ Japan ]==============="
-    MediaUnlockTest_DMM ${1}
-    MediaUnlockTest_AbemaTV_IPTest ${1}
-    MediaUnlockTest_Niconico ${1}
-	MediaUnlockTest_music.jp ${1}
-    MediaUnlockTest_Telasa ${1}
-    MediaUnlockTest_Paravi ${1}
-    MediaUnlockTest_unext ${1}
-    MediaUnlockTest_HuluJP ${1}
-    MediaUnlockTest_TVer ${1}
-	MediaUnlockTest_GYAO ${1}
-    MediaUnlockTest_wowow ${1}
-    MediaUnlockTest_VideoMarket ${1}
-    MediaUnlockTest_FOD ${1}
-	MediaUnlockTest_Radiko ${1}
-    MediaUnlockTest_DAM ${1}
-    MediaUnlockTest_J:COM_ON_DEMAND ${1}
-    ShowRegion Game
-    MediaUnlockTest_Kancolle ${1}
-    MediaUnlockTest_UMAJP ${1}
-    MediaUnlockTest_KonosubaFD ${1}
-    MediaUnlockTest_PCRJP ${1}
-    MediaUnlockTest_WFJP ${1}
-    MediaUnlockTest_ProjectSekai ${1}
-    echo "======================================="
-}
 
 function Global_UnlockTest() {
     echo ""
     echo "============[ Multination ]============"
     MediaUnlockTest_Dazn ${1}
-    MediaUnlockTest_HotStar ${1}
     MediaUnlockTest_DisneyPlus ${1}
     MediaUnlockTest_Netflix ${1}
     MediaUnlockTest_YouTube_Premium ${1}
     MediaUnlockTest_PrimeVideo_Region ${1}
     MediaUnlockTest_TVBAnywhere ${1}
     MediaUnlockTest_iQYI_Region ${1}
-    MediaUnlockTest_Viu.com ${1}
     MediaUnlockTest_YouTube_CDN ${1}
     MediaUnlockTest_NetflixCDN ${1}
     MediaUnlockTest_Spotify ${1}
@@ -2870,58 +2779,7 @@ function Global_UnlockTest() {
     echo "======================================="
 }
 
-function SA_UnlockTest() {
-    echo "===========[ South America ]==========="
-    MediaUnlockTest_StarPlus ${1}
-    MediaUnlockTest_HBOMax ${1}
-    MediaUnlockTest_DirecTVGO ${1}
-    MediaUnlockTest_Funimation ${1}
-    echo "======================================="
-}
 
-function OA_UnlockTest() {
-    echo "==============[ Oceania ]=============="
-    MediaUnlockTest_NBATV ${1}
-    MediaUnlockTest_AcornTV ${1}
-    MediaUnlockTest_SHOWTIME ${1}
-    MediaUnlockTest_BritBox ${1}
-    MediaUnlockTest_Funimation ${1}
-    MediaUnlockTest_ParamountPlus ${1}
-    ShowRegion AU
-    MediaUnlockTest_Stan ${1}
-    MediaUnlockTest_Binge ${1}
-    MediaUnlockTest_Docplay ${1}
-    MediaUnlockTest_Channel7 ${1}
-    MediaUnlockTest_Channel9 ${1}
-    MediaUnlockTest_Channel10 ${1}
-    MediaUnlockTest_ABCiView ${1}
-    MediaUnlockTest_KayoSports ${1}
-    MediaUnlockTest_OptusSports ${1}
-    MediaUnlockTest_SBSonDemand ${1}
-    ShowRegion NZ
-    MediaUnlockTest_NeonTV ${1}
-    MediaUnlockTest_SkyGONZ ${1}
-    MediaUnlockTest_ThreeNow ${1}
-    MediaUnlockTest_MaoriTV ${1}
-    echo "======================================="
-}
-
-function Sport_UnlockTest() {
-    echo "===============[ Sport ]==============="
-    MediaUnlockTest_Dazn ${1}
-    MediaUnlockTest_StarPlus ${1}
-    MediaUnlockTest_ESPNPlus ${1}
-    MediaUnlockTest_NBATV ${1}
-    MediaUnlockTest_FuboTV ${1}
-    MediaUnlockTest_MolaTV ${1}
-    MediaUnlockTest_SetantaSports ${1}
-    MediaUnlockTest_ElevenSportsTW ${1}
-    MediaUnlockTest_OptusSports ${1}
-    MediaUnlockTest_BeinConnect ${1}
-    MediaUnlockTest_EurosportRO ${1}
-
-    echo "======================================="
-}
 
 function CheckV4() {
     if [[ "$language" == "e" ]]; then
@@ -2945,16 +2803,16 @@ function CheckV4() {
     else
         if [[ "$NetworkType" == "6" ]]; then
             isv4=0
-            echo -e "${Font_SkyBlue}用户选择只检测IPv6结果，跳过IPv4检测...${Font_Suffix}"
+            echo -e "${Font_SkyBlue}User Choose to Test Only IPv6 Results, Skipping IPv4 Testing...${Font_Suffix}"
         else
-            echo -e " ${Font_SkyBlue}** 正在测试IPv4解锁情况${Font_Suffix} "
+            echo -e " ${Font_SkyBlue}** Checking Results Under IPv4${Font_Suffix} "
             echo "--------------------------------"
-            echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp4} (${local_ipv4_asterisk})${Font_Suffix} "
+            echo -e " ${Font_SkyBlue}** Your Network Provider: ${local_isp4} (${local_ipv4_asterisk})${Font_Suffix} "
             check4=$(ping 1.1.1.1 -c 1 2>&1)
             if [[ "$check4" != *"unreachable"* ]] && [[ "$check4" != *"Unreachable"* ]]; then
                 isv4=1
             else
-                echo -e "${Font_SkyBlue}当前主机不支持IPv4,跳过...${Font_Suffix}"
+                echo -e "${Font_SkyBlue}No IPv4 Connectivity Found, Abort IPv4 Testing...${Font_Suffix}"
                 isv4=0
             fi
 
@@ -2988,19 +2846,19 @@ function CheckV6() {
     else
         if [[ "$NetworkType" == "4" ]]; then
             isv6=0
-            echo -e "${Font_SkyBlue}用户选择只检测IPv4结果，跳过IPv6检测...${Font_Suffix}"
+            echo -e "${Font_SkyBlue}User Choose to Test Only IPv4 Results, Skipping IPv6 Testing...${Font_Suffix}"
         else
             check6_1=$(curl $useNIC -fsL --write-out %{http_code} --output /dev/null --max-time 10 ipv6.google.com)
             check6_2=$(curl $useNIC -fsL --write-out %{http_code} --output /dev/null --max-time 10 ipv6.ip.sb)
             if [[ "$check6_1" -ne "000" ]] || [[ "$check6_2" -ne "000" ]]; then
                 echo ""
                 echo ""
-                echo -e " ${Font_SkyBlue}** 正在测试IPv6解锁情况${Font_Suffix} "
+                echo -e " ${Font_SkyBlue}** Checking Results Under IPv6${Font_Suffix} "
                 echo "--------------------------------"
-                echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp6} (${local_ipv6_asterisk})${Font_Suffix} "
+                echo -e " ${Font_SkyBlue}** Your Network Provider: ${local_isp6} (${local_ipv6_asterisk})${Font_Suffix} "
                 isv6=1
             else
-                echo -e "${Font_SkyBlue}当前主机不支持IPv6,跳过...${Font_Suffix}"
+                echo -e "${Font_SkyBlue}No IPv6 Connectivity Found, Abort IPv6 Testing...${Font_Suffix}"
                 isv6=0
             fi
             echo -e ""
@@ -3018,25 +2876,9 @@ function Goodbye() {
     if [[ "$language" == "e" ]]; then
         echo -e "${Font_Green}Testing Done! Thanks for Using This Script! ${Font_Suffix}"
         echo -e ""
-        echo -e "${Font_Yellow}Number of Script Runs for Today: ${TodayRunTimes}; Total Number of Script Runs: ${TotalRunTimes} ${Font_Suffix}"
-        echo -e ""
-        echo -e "========================================================="
-        echo -e "${Font_Red}If you found this script helpful, you can but me a coffee${Font_Suffix}"
-        echo -e ""
-        echo -e "LTC: LQD4S6Y5bu3bHX6hx8ASsGHVfaqFGFNTbx"
-        echo -e "========================================================="
     else
-        echo -e "${Font_Green}本次测试已结束，感谢使用此脚本 ${Font_Suffix}"
+        echo -e "${Font_Green}Testing Done! Thanks for Using This Script! ${Font_Suffix}"
         echo -e ""
-        echo -e "${Font_Yellow}检测脚本当天运行次数: ${TodayRunTimes}; 共计运行次数: ${TotalRunTimes} ${Font_Suffix}"
-        echo -e ""
-        bash <(curl -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/reference/AD/AD${ADN})
-        echo -e ""
-        echo -e ""
-        echo -e ""
-        echo -e ""
-        echo -e "${Font_Yellow}由于大部分 IP 的 Tiktok 检测时间过长，已将该检测移除出脚本${Font_Suffix}"
-        echo -e "${Font_Yellow}需要检测 Tiktok 区域请移步项目: https://github.com/lmc999/TikTokCheck${Font_Suffix}"
 
     fi
 }
